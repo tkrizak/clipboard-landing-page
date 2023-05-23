@@ -1,6 +1,8 @@
 :root {
   --clr-primary: hsl(171, 66%, 44%);
   --clr-secondary: hsl(233, 100%, 69%);
+
+  --clr-neutral-lighter: hsl(220, 18%, 97%);
   --clr-neutral-light: hsl(201, 11%, 66%);
   --clr-neutral-dark: hsl(210, 10%, 33%);
   --clr-white: hsl(0, 0%, 100%);
@@ -8,12 +10,12 @@
   --ff-all: "Bai Jamjuree", sans-serif;
 
   --fs-body: 18px;
-  --fs-h1: 2.5rem;
+  --fs-h1: 2.75rem;
   --fs-h2: 2rem;
   --fs-h3: 1.5rem;
   --fs-h1-mobile: 2.25rem;
   --fs-regular: 1rem;
-  --fs-regular-small: 0.8rem;
+  --fs-regular-bigger: 1.15rem;
   --fs-regular-big: 1.25rem;
   --fs-button: 1.1rem;
 
@@ -56,6 +58,18 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: var(--ff-all);
+  color: var(--clr-neutral-light);
+}
+
+p {
+  font-size: var(--fs-regular);
+  font-weight: var(--fw-regular);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--clr-neutral-dark);
 }
 
 /* A elements that don't have a class get default styles */
@@ -110,11 +124,11 @@ svg {
 }
 
 .bg-clr-neutral-1 {
-  color: var(--clr-neutral-light);
+  background-color: var(--clr-neutral-lighter);
 }
 
 .fs-h1 {
-  font-size: var(--fs-h1);
+  font-size: var(--fs-h1-mobile);
 }
 
 .fs-h2 {
@@ -125,24 +139,20 @@ svg {
   font-size: var(--fs-h3);
 }
 
-.fs-h1-mobile {
-  font-size: var(--fs-h1-mobile);
+.fs-regular {
+  font-size: var(--fs-regular);
 }
 
 .fs-regular {
   font-size: var(--fs-regular);
 }
 
-.fs-regular-small {
-  font-size: var(--fs-regular-small);
+.fs-regular-bigger {
+  font-size: var(--fs-regular-bigger);
 }
 
-.fs-regular-big {
-  font-size: var(--fs-regular-big);
-}
-
-.fw-regular {
-  font-weight: var(--fw-regular);
+.fw-regular-big {
+  font-weight: var(--fw-regular-big);
 }
 
 .fw-bold {
@@ -152,47 +162,234 @@ svg {
 .container {
   max-width: 1600px;
   margin-inline: auto;
-  padding: 16px;
+  padding: 32px;
 }
 
 .padding-block {
   padding-block: 50px;
 }
 
+.text-align {
+  text-align: center;
+}
+
+.text-padding {
+  padding-top: 8px;
+}
+
 .flex {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .flex-col {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.heading-container {
+  max-width: 700px;
+}
+
+.row-spacer {
+  gap: 60px;
+}
+
+.align-center {
+  align-items: center;
 }
 
 .header {
   background-image: url(./images/bg-header-mobile.png);
   background-repeat: no-repeat;
   background-position: top;
+  padding-top: 100px;
 }
 
 .btn {
   color: var(--clr-white);
-  padding: 0.5rem 1.25rem;
+  padding: 0.75em 2.25em;
   border: none;
-  border-radius: 20px;
+  border-radius: 50px;
   font-size: var(--fs-button);
+  font-weight: var(--fw-bold);
   cursor: pointer;
 }
 
 .btn-ios {
   background-color: var(--clr-primary);
+  border-bottom: 3px solid hsl(171, 66%, 40%);
+  box-shadow: 0 4px 12px 0px hsl(171, 66%, 80%);
 }
 
 .btn-mac {
   background-color: var(--clr-secondary);
+  border-bottom: 3px solid hsl(233, 100%, 65%);
+  box-shadow: 0 4px 12px 0px hsl(233, 100%, 90%);
+}
+
+.btn-gap {
+  gap: 20px;
 }
 
 .footer-nav li a {
   text-decoration: none;
   color: var(--clr-neutral-dark);
   font-weight: var(--fw-bold);
+}
+
+.buttons {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.flex .logo {
+  margin-inline: auto;
+}
+
+.two-columns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 100px;
+}
+
+.two-columns > * {
+}
+
+.two-columns-right {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 350px;
+}
+
+.tools-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.tool-container {
+  max-width: 350px;
+}
+
+.tool-container img {
+  margin-inline: auto;
+  padding-bottom: 30px;
+}
+
+.company-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 100px;
+  justify-content: center;
+  gap: 80px;
+}
+
+.company-logos img {
+  height: 100%;
+}
+
+.spacer-workflow {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.workflow-text {
+  padding-top: 40px;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.logo-footer {
+  max-width: 50px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav ul li {
+  padding: 10px;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+@media (min-width: 375px) {
+  .header {
+    background-image: url(./images/bg-header-desktop.png);
+    background-repeat: repeat-x;
+  }
+  .header-lg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fs-h1 {
+    font-size: var(--fs-h1);
+  }
+
+  .fs-regular-big {
+    font-size: var(--fs-regular-big);
+  }
+
+  .fs-regular-bigger {
+    font-size: var(--fs-regular-bigger);
+  }
+
+  .buttons {
+    flex-direction: row;
+  }
+  .section-lg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .company-logos {
+    gap: 150px;
+  }
+
+  .two-columns {
+    gap: 200px;
+  }
+
+  .two-columns-right.text-align {
+    text-align: left;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .footer-nav.text-align {
+    text-align: left;
+  }
 }
