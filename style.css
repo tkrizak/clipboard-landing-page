@@ -233,7 +233,7 @@ svg {
   gap: 20px;
 }
 
-.footer-nav li a {
+.footer-left-section li a {
   text-decoration: none;
   color: var(--clr-neutral-dark);
   font-weight: var(--fw-bold);
@@ -308,18 +308,20 @@ svg {
 .footer {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   gap: 50px;
+}
+
+.footer-left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 
 .logo-footer {
   max-width: 50px;
-}
-
-.footer-nav {
-  display: flex;
-  flex-direction: column;
 }
 
 .footer-nav ul li {
@@ -382,11 +384,16 @@ svg {
     justify-content: space-between;
   }
 
-  .footer-nav {
+  .footer-left-section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 100px;
+  }
+
+  .footer-nav {
+    display: flex;
+    gap: 80px;
   }
 
   .footer-nav.text-align {
