@@ -202,9 +202,8 @@ svg {
 
 .header {
   background-image: url(./images/bg-header-mobile.png);
-  background-repeat: no-repeat;
   background-position: top;
-  padding-top: 100px;
+  background-size: cover;
 }
 
 .btn {
@@ -223,10 +222,20 @@ svg {
   box-shadow: 0 4px 12px 0px hsl(171, 66%, 80%);
 }
 
+.btn-ios:hover {
+  background-color: hsla(171, 66%, 44%, 0.8);
+  border-bottom: 3px solid hsl(171, 66%, 40%, 0.8);
+}
+
 .btn-mac {
   background-color: var(--clr-secondary);
   border-bottom: 3px solid hsl(233, 100%, 65%);
   box-shadow: 0 4px 12px 0px hsl(233, 100%, 90%);
+}
+
+.btn-mac:hover {
+  background-color: hsl(233, 100%, 69%, 0.8);
+  border-bottom: 3px solid hsl(233, 100%, 65%, 0.8);
 }
 
 .btn-gap {
@@ -325,10 +334,28 @@ svg {
   padding: 10px;
 }
 
+.footer-nav a:hover {
+  color: var(--clr-primary);
+}
+
 .footer-icons {
   display: flex;
   align-items: center;
   gap: 40px;
+}
+
+.footer-icons svg:hover {
+  fill: var(--clr-primary);
+}
+
+.attribution {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.attribution span a {
+  color: var(--clr-primary);
+  font-weight: var(--fw-bold);
 }
 
 @media (min-width: 375px) {
