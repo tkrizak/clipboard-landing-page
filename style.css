@@ -257,9 +257,6 @@ svg {
   gap: 100px;
 }
 
-.two-columns > * {
-}
-
 .two-columns-right {
   display: flex;
   flex-direction: column;
@@ -387,6 +384,7 @@ svg {
   .footer-left-section {
     display: flex;
     flex-direction: row;
+    justify-content: left;
     flex-wrap: wrap;
     gap: 100px;
   }
